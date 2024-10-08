@@ -1,2 +1,2 @@
 # nagios-bash-script
-bash Script to configure the Nagios on the Amazon Linux Platform
+Bash Script to configure the Nagios on the Amazon Linux Platform
