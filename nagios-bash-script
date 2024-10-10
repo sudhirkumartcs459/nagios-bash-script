@@ -35,6 +35,7 @@ define contact {
 }
 EOF
 make install-webconf
+echo redhat | htpasswd -s -c -i /usr/local/nagios/etc/htpasswd.users nagiosadmin
 systemctl start  httpd
 cd  /root/nagios
 cd  nagios-plugins-2.3.3
