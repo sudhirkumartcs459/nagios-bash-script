@@ -18,9 +18,7 @@ tar -xf nagios-4.4.9.tar.gz
  make install-init
  make install-commandmode
  make install-config
-sudo rm -fr /usr/local/nagios/etc/objects/contacts.cfg
-touch  /usr/local/nagios/etc/objects/contacts.cfg
- cat  >> /usr/local/nagios/etc/objects/contacts.cfg  << EOF
+cat  >> /usr/local/nagios/etc/objects/contacts.cfg  << EOF
 # CONTACTS
 #
 ###############################################################################
