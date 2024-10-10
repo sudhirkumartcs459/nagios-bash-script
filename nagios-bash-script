@@ -18,12 +18,21 @@ tar -xf nagios-4.4.9.tar.gz
  make install-init
  make install-commandmode
  make install-config
- cat  >> /usr/local/nagios/etc/objects/contacts.cfg << EOF
+ cat  >> /usr/local/nagios/etc/objects/contacts.cfg  << EOF
+# CONTACTS
+#
+###############################################################################
+
+# Just one contact defined by default - the Nagios admin (that's you)
+# This contact definition inherits a lot of default values from the
+# 'generic-contact' template which is defined elsewhere.
+
 define contact {
-contact_name        nagiosadmin
-use                 generic-contact
-alias               Nagios Admin
-email               admin@tecmint.com
+
+    contact_name            nagiosadmin             ; Short name of user
+    use                     generic-contact         ; Inherit default values from generic-contact template (defined above)
+    alias                   Nagios Admin            ; Full name of user
+    email                   admin@tecmint.com ; <<***** CHANGE THIS TO YOUR EMAIL ADDRESS ******
 }
 EOF
 make install-webconf
