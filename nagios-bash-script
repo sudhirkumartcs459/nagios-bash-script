@@ -31,7 +31,7 @@ define contact {
 
     contact_name            nagiosadmin             ; Short name of user
     use                     generic-contact         ; Inherit default values from generic-contact template (defined above)
-    email                   admin@tecmint.com ; <<***** CHANGE THIS TO YOUR EMAIL ADDRESS ******
+    email                   sudhirkumar.tcs@gmail.com ; <<***** CHANGE THIS TO YOUR EMAIL ADDRESS ******
 }
 EOF
 make install-webconf
