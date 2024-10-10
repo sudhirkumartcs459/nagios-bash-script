@@ -1,5 +1,6 @@
 #!/bin/bash
 yum install -y httpd httpd-tools php gcc glibc glibc-common gd gd-devel make net-snmp
+yum install -y httpd php php-cli gcc glibc glibc-common gd gd-devel net-snmp openssl openssl-devel wget unzip
 useradd nagios
 groupadd nagcmd
 usermod -G nagcmd nagios
