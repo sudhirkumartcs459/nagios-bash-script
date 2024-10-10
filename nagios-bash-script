@@ -18,7 +18,7 @@ tar -xf nagios-4.4.9.tar.gz
  make install-init
  make install-commandmode
  make install-config
- cat >> /usr/local/nagios/etc/objects/contacts.cfg << EOF
+ cat  >> /usr/local/nagios/etc/objects/contacts.cfg << EOF
 define contact {
 contact_name        nagiosadmin
 use                 generic-contact
@@ -28,8 +28,8 @@ email               admin@tecmint.com
 EOF
 make install-webconf
 systemctl start  httpd
-cd /root/nagios
-cd nagios-plugins-2.3.3
+cd  /root/nagios
+cd  nagios-plugins-2.3.3
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
 make
 make install
